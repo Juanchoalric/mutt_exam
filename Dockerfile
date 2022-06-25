@@ -8,4 +8,4 @@ COPY Pipfile Pipfile.lock /newproj/
 
 RUN pip install pipenv && pipenv install --system
 
-COPY . /project/
+COPY . /newproj/
