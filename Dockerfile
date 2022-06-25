@@ -1,11 +1,11 @@
 FROM python:3.9
 
-ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
-WORKDIR /project
+COPY. /project/
+WORKDIR /project/
 
-COPY Pipfile Pipfile.lock /project/
+RUN pip install pipenv
+RUN pipenv install --system
 
-RUN pip install pipenv && pipenv install --system
-
-COPY . /project/
+EXPOSE 8000
