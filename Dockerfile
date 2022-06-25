@@ -2,9 +2,9 @@ FROM python:3.9
 
 ENV PYTHONDONTWRITEBYTECODE 1
 
-WORKDIR /project
+WORKDIR /newproj
 
-COPY Pipfile Pipfile.lock /project/
+COPY Pipfile Pipfile.lock /newproj/
 
 RUN pip install pipenv && pipenv install --system
 
