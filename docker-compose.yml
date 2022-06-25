@@ -2,8 +2,8 @@ version: "3.8"
 services:
   web:
     build: .
-    command: python /newproj/manage.py runserver 0.0.0.0:8000
+    command: python /project/manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/newproj
+      - .:/project
     ports:
       - 8000:8000
