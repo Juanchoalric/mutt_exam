@@ -2,8 +2,8 @@ version: "3.8"
 services:
   web:
     build: .
-    command: python /project/manage.py runserver 0.0.0.0:8000
+    command: python /mutt_exam/manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/project
+      - .:/mutt_exam
     ports:
       - 8000:8000
